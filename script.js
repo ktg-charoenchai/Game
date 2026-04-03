@@ -170,7 +170,7 @@ function showResult() {
 
 nextPageBtn.addEventListener("click", () => {
   stopAudio();
-  window.location.href = "https://www.google.com/";
+  window.location.href = "https://ktg-charoenchai.github.io/BWS-Sci-tech-gen-1-student-Home/";
 });
 
 restartBtn.addEventListener("click", () => {
