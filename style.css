@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #FFD1DC;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+#questionTitle{
+  padding-bottom:15px;
+}
+
+#progress {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #7f8c8d;
+}
+
+#questionImage,
+#questionVideo {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid #ecf0f1;
+  margin-bottom: 28px;
+  background: #f8f9fa;
+}
+
+#choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.choice-btn {
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  border: 2px solid #FFD1DC;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.choice-btn:hover {
+  background: rgba(255, 209, 220, 0.4);
+  transform: translateY(-2px);
+}
+
+.choice-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#feedback {
+  min-height: 60px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 16px 0;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.correct { color: #27ae60; background: #e8f5e9; }
+.wrong   { color: #e74c3c; background: #ffebee; }
+
+#nextBtn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  background: #c70e0e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#nextBtn:disabled {
+  background: #7f8c8d;
+  cursor: not-allowed;
+}
+
+/* ===== หน้าผลคะแนน ===== */
+#result {
+  text-align: center;
+  display: none;           /* ใช้ display: none แทน class hidden */
+  margin-top: 40px;
+}
+
+#result.show {
+  display: block;
+}
+
+.score-box {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #c70e0e;
+  margin: 20px 0;
+}
+
+.score-message {
+  font-size: 1.3rem;
+  margin: 15px 0 30px;
+  color: #34495e;
+}
+
+#result button {
+  margin: 10px 8px;
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#nextPageBtn {
+  background: #27ae60;
+  color: white;
+}
+
+#restartBtn {
+  background: #3498db;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  #choices {
+    grid-template-columns: 1fr;
+  }
+  .score-box {
+    font-size: 3rem;
+  }
+}
